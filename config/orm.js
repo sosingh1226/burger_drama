@@ -50,26 +50,28 @@ const orm = {
       cb(result);
     });
   },
-  create(table, cols, vals, cb) {
-    let queryString = `INSERT INTO ${burgers}`;
 
-    queryString += ' (';
-    queryString += cols.toString();
-    queryString += ') ';
-    queryString += 'VALUES (';
-    queryString += printQuestionMarks(vals.length);
-    queryString += ') ';
+  // create(table, cols, vals, cb) {
+  //   let queryString = `INSERT INTO ${burgers}`;
 
-    console.log(queryString);
+  //   queryString += ' (';
+  //   queryString += cols.toString();
+  //   queryString += ') ';
+  //   queryString += 'VALUES (';
+  //   queryString += printQuestionMarks(vals.length);
+  //   queryString += ') ';
 
-    connection.query(queryString, vals, (err, result) => {
-      if (err) {
-        throw err;
-      }
+  //   console.log(queryString);
 
-      cb(result);
-    });
-  },
+  //   connection.query(queryString, vals, (err, result) => {
+  //     if (err) {
+  //       throw err;
+  //     }
+
+  //     cb(result);
+  //   });
+  // },
+
   // An example of objColVals would be {name: panther, sleepy: true}
   update(table, objColVals, condition, cb) {
     let queryString = `UPDATE ${table}`;
@@ -85,6 +87,19 @@ const orm = {
         throw err;
       }
 
+      cb(result);
+    });
+  },
+
+  insertOne(table, vals, cb) {
+    let queryString = `INSERT INTO ${table} (burger_name) VALUES (?)`;
+
+    console.log(queryString);
+
+    connection.query(queryString, vals, (err, result) => {
+      if (err) {
+        throw err;
+      }
       cb(result);
     });
   },

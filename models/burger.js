@@ -2,8 +2,8 @@
 const orm = require('../config/orm.js');
 
 const burger = {
-  all(cb) {
-    orm.all('burgers', (res) => cb(res));
+  selectAll(cb) {
+    orm.selectAll('burgers', (res) => cb(res));
   },
   // The variables cols and vals are arrays.
   create(cols, vals, cb) {
@@ -12,6 +12,11 @@ const burger = {
 
   update(objColVals, condition, cb) {
     orm.update('burgers', objColVals, condition, (res) => cb(res));
+  },
+
+  // The variables vals are arrays.
+  insertOne(vals, cb) {
+    orm.insertOne("burgers", vals, (res) => cb(res));
   },
 };
 

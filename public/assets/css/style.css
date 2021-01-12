@@ -1,19 +1,45 @@
-li {
+#submitButton {
   padding: 5px;
   margin: 5px;
-  background: #faebd7;
+  background: rgb(235, 46, 77);
 }
 
-.label {
-  font-weight: bold;
-}
-
-.create-update-form {
+.devouredID {
   padding: 5px;
   margin: 5px;
-  background: aqua;
+  background: yellow;
 }
 
-.form-group {
-  margin-bottom: 5px;
+
+#displayBurger {
+  min-height: 20vh;
+  background: rgb(95, 167, 190);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+#create-form {
+  height: 150px;
+  width: 300px;
+  background: yellowgreen;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+#all-devoured {
+  height: 150px;
+  width: 300px;
+  background: yellow;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
 }

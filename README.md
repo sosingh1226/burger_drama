@@ -11,7 +11,7 @@ This is a system that is intended to be used by a burger company where they are 
 (https://burger-drama.herokuapp.com/)
 
 * Portfolio Link: 
-(https://github.com/sosingh1226/burger_drama)
+(https://sosingh1226.github.io/portfolio_atwork/portfolio.html)
 
 ## Challenges
 

@@ -41,7 +41,7 @@ const objToSql = (ob) => {
 
 // Object for all our SQL statement functions.
 const orm = {
-  all(burgers, cb) {
+  selectAll(burgers, cb) {
     const queryString = `SELECT * FROM ${burgers};`;
     connection.query(queryString, (err, result) => {
       if (err) {
